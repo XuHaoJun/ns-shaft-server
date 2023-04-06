@@ -1,0 +1,16 @@
+# fly.toml file generated for ns-shaft-server on 2023-04-06T15:29:04+08:00
+
+app = "ns-shaft-server"
+primary_region = "nrt"
+
+[[services]]
+  internal_port = 3536
+  protocol = "tcp"
+
+  [[services.ports]]
+    handlers = ["http"]
+    port = "80"
+
+  [[services.ports]]
+    handlers = ["tls", "http"]
+    port = "443"
